@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AppContainer } from 'react-hot-loader';
 import Counter from "./components";
-import "./styles/index.less";
+import "./index.less";
 import * as injectTapEventPlugin from 'react-tap-event-plugin';
 
 injectTapEventPlugin();
