@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Logr</title>
+    <link href="./ui/vendors/iconfont/material-icons.css"
+      rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+
+<!--服务层（依赖 Node 环境）加载-->
+<script>
+    window.serviceBridge = require('./loader/service-loader');
+</script>
+
+<!-- This script adds the Roboto font to our project. For more detail go to this site:  http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500 -->
+<script>
+    var WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,500:latin' ] }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = './ui/vendors/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+<!--交互层（依赖 Webkit 环境）加载-->
+<script src="./loader/ui-loader.js"></script>
+</html>
